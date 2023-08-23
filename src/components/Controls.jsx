@@ -31,7 +31,6 @@ export const Controls = () => {
   const dispatch = useDispatch();
   const region = useSelector(selectRegion);
   const handleSelect = (reg) => dispatch(setRegion(reg?.value || ''));
-  console.log(optionsMap[region]);
 
   return (
     <Wrapper>
