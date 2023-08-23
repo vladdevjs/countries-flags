@@ -1,5 +1,10 @@
 import { combineReducers } from 'redux';
 import { themeReducer } from './theme/theme-reducer';
 import { countriesReducer } from './country/country-reducer';
+import { controlsReducer } from './controls/controls-reducer';
 
-export const rootReducer = combineReducers({ theme: themeReducer, countries: countriesReducer });
+export const rootReducer = combineReducers({
+  theme: themeReducer,
+  countries: countriesReducer,
+  controls: controlsReducer,
+});
