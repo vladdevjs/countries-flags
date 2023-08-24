@@ -10,3 +10,7 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 - [x] Фильтрация стран по региону
 - [x] Получение расширенной информации о выбранной стране
 - [x] Получени списка соседей страны
+
+## Демо
+
+Проект развернут на Vercel: [https://countries-flags-gray.vercel.app/](https://countries-flags-gray.vercel.app/)
