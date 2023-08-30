@@ -4,9 +4,10 @@ import { configureStore } from '@reduxjs/toolkit';
 import * as api from './config';
 import { ThemeReducer } from './features/theme/theme-slice';
 import { controlsReducer } from './features/controls/controls-slice';
+import { countryReducer } from './features/countries/countries-slice';
 
 export const store = configureStore({
-  reducer: { theme: ThemeReducer, controls: controlsReducer },
+  reducer: { theme: ThemeReducer, controls: controlsReducer, countries: countryReducer },
   devTools: true,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
