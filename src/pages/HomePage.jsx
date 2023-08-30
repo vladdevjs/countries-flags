@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { List } from '../components/List';
 import { Card } from '../components/Card';
-import { Controls } from '../components/Controls';
+import { Controls } from '../features/controls/Controls';
 import { selectVisibleCountries, selectCountriesInfo } from '../store/country/country-selectors';
 import { loadCountries } from '../store/country/country-actions';
 import { selectControls } from '../store/controls/controls-selectors';
