@@ -14,3 +14,7 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 ## Демо
 
 Проект развернут на Vercel: [https://countries-flags-list.vercel.app/](https://countries-flags-list.vercel.app/)
+
+## Улучшение
+
+- [] Добавить типизацию
