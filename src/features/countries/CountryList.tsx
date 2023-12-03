@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { useCountries } from './useCountries.js';
+import { useCountries } from './useCountries';
 
 import { List } from 'components/List.js';
 import { Card } from 'components/Card.js';
