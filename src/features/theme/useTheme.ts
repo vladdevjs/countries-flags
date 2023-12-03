@@ -1,12 +1,13 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { setTheme } from './theme-slice';
+import { Theme, setTheme } from './theme-slice';
+import { selectTheme } from './theme-selectors';
 
-export const useTheme = () => {
+export const useTheme = (): [Theme, () => void] => {
   const dispatch = useDispatch();
-  const theme = useSelector((state) => state.theme);
+  const theme = useSelector(selectTheme);
 
-  const toggleTheme = () => {
+  const toggleTheme = (): void => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     dispatch(setTheme(newTheme));
     localStorage.setItem('theme', newTheme);
@@ -15,7 +16,7 @@ export const useTheme = () => {
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
-      dispatch(setTheme(savedTheme));
+      dispatch(setTheme(JSON.parse(savedTheme)));
     }
   }, [dispatch]);
 
