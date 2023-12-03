@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 import { useCountries } from './useCountries';
 
-import { List } from 'components/List.js';
-import { Card } from 'components/Card.js';
-import { CountryInfo } from 'types/country.js';
+import { List } from 'components/List';
+import { Card } from 'components/Card';
+import { CountryInfo } from 'types/country';
 
 const CountryList = () => {
   const navigate = useNavigate();
