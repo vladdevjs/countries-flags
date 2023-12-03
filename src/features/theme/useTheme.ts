@@ -16,7 +16,7 @@ export const useTheme = (): [Theme, () => void] => {
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
-      dispatch(setTheme(JSON.parse(savedTheme)));
+      dispatch(setTheme(savedTheme as Theme));
     }
   }, [dispatch]);
 
