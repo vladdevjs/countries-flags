@@ -1,10 +1,21 @@
+import Select, { CSSObjectWithLabel, Props } from 'react-select';
 import styled from 'styled-components';
+import { Region } from 'types';
 
-import Select from 'react-select';
+export type CountryOption =
+  | {
+      label: Region;
+      value: Region;
+    }
+  | '';
 
-export const CustomSelect = styled(Select).attrs({
+function MySelect(props: Props<CountryOption, false>) {
+  return <Select {...props} />;
+}
+
+export const CustomSelect = styled(MySelect).attrs({
   styles: {
-    control: (provided) => ({
+    control: (provided: CSSObjectWithLabel) => ({
       ...provided,
       backgroundColor: 'var(--colors-ui-base)',
       color: 'var(--colors-text)',
@@ -14,13 +25,11 @@ export const CustomSelect = styled(Select).attrs({
       boxShadow: 'var(--shadow)',
       height: '50px',
     }),
-    option: (provided, state) => ({
+    option: (provided: CSSObjectWithLabel, state: { isSelected: boolean }) => ({
       ...provided,
       cursor: 'pointer',
       color: 'var(--colors-text)',
-      backgroundColor: state.isSelected
-        ? 'var(--colors-bg)'
-        : 'var(--colors-ui-base)',
+      backgroundColor: state.isSelected ? 'var(--colors-bg)' : 'var(--colors-ui-base)',
     }),
   },
 })`
