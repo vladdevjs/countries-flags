@@ -18,4 +18,4 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 ## Улучшение
 
 - [x] Перейти на Redux Toolkit
-- [] Добавить типизацию
+- [x] Добавить типизацию
