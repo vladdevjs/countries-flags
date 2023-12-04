@@ -16,6 +16,7 @@ type Language = {
 export type Country = {
   name: string;
   nativeName: string;
+  flag: string;
   flags: { png: string; svg: string };
   region: Region;
   population: number;
